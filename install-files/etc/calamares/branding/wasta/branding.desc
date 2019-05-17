@@ -1,0 +1,27 @@
+---
+componentName: wasta
+
+strings:
+    productName:         Wasta-Linux
+    shortProductName:    Wasta-Linux
+    version:             18.04
+    shortVersion:        bionic
+    versionedName:       Wasta-Linux 18.04
+    shortVersionedName:  Wasta-Linux 18.04
+    bootloaderEntryName: Wasta-Linux 18.04
+    productUrl:          http://sites.google.com/site/wastalinux/
+    #supportUrl:          https://lubuntu.me/support/
+    #knownIssuesUrl:      https://wiki.ubuntu.com/BionicBeaver/Beta1/LubuntuNext#Known_Problems
+    releaseNotesUrl:     http://sites.google.com/site/wastalinux/home/download
+
+images:
+    productLogo:         "icons/wasta-linux.png"
+    productIcon:         "icons/wasta-linux.png"
+    productWelcome:      "00_welcome.png"
+
+slideshow:               "show.qml"
+
+style:
+   sidebarBackground:    "#808080"
+   sidebarText:          "#FFFFFF"
+   sidebarTextSelect:    "#0068C8"

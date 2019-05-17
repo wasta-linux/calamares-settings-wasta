@@ -1,0 +1,16 @@
+Source: calamares-settings-wasta
+Section: utils
+Priority: extra
+Maintainer: Justin Luth <jluth@mail.com>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 4.1.3
+Homepage: https://launchpad.net/~wasta-linux
+
+Package: calamares-settings-wasta
+Architecture: all
+Depends: calamares, squashfs-tools, ${shlibs:Depends}, ${misc:Depends}
+Suggests:
+Conflicts: calamares-settings-lubuntu
+Description: Calamares installer: settings and branding for Wasta-Linux
+ .
+ based off of the Lubuntu 18.04 and 19.10 configurations
