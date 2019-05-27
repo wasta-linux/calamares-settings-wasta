@@ -308,25 +308,22 @@ def run():
 
         if not os.path.exists(source):
             # Since the hard-coded path is wrong, try the live boot path as a fallback (multiboot USB support)
-            try_live_image=True
-            if "liveImageFallback" in job.configuration:
-                try_live_image = job.configuration['liveImageFallback']
-            if try_live_image:
+            if "liveImageFallback_mount" in job.configuration:
+                mediapath = job.configuration['liveImageFallback_mount']
                 imagefile = os.path.basename(source)
                 PATH_PROCCMDLINE = '/proc/cmdline'
                 if os.path.isfile(PATH_PROCCMDLINE) and os.access(PATH_PROCCMDLINE, os.R_OK):
                     with open(PATH_PROCCMDLINE, 'r') as cmdline:
                         #use shlex.split to preserve spaces in quoted strings
                         for arg in shlex.split(cmdline.read()):
-                            mediapath = ""
                             livepath = ""
                             if re.search('^live-media-path=.+|^boot-path=.+', arg): #Debian
-                                mediapath = os.path.join(os.sep, 'media', 'cdrom')
                                 livepath = os.path.relpath(arg.split('=')[1], os.sep)
                             if re.search('^misobasedir=.+', arg): #Manjaro
-                                mediapath = os.path.join(os.sep, 'run', 'miso', 'bootmnt')
                                 livepath = os.path.relpath(arg.split('=')[1], os.sep)
-                            if livepath != "":
+                            if re.search('^kdeosisobasedir=.+', arg): #KaOS
+                                livepath = os.path.relpath(arg.split('=')[1], os.sep)
+                            if livepath != "" and mediapath != "":
                                 for base, subdirs, names in os.walk(os.path.join(mediapath, livepath)):
                                     if imagefile in names:
                                         source = os.path.join(base, imagefile)
