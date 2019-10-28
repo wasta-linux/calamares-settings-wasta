@@ -1,14 +1,16 @@
 ---
 componentName: wasta
+welcomeStyleCalamares:   true
+windowExpanding:         normal
 
 strings:
     productName:         Wasta-Linux
     shortProductName:    Wasta-Linux
-    version:             18.04
-    shortVersion:        bionic
-    versionedName:       Wasta-Linux 18.04
-    shortVersionedName:  Wasta-Linux 18.04
-    bootloaderEntryName: Wasta-Linux 18.04
+    version:             19.10
+    shortVersion:        eoan
+    versionedName:       Wasta-Linux 19.10
+    shortVersionedName:  Wasta-Linux 19.10
+    bootloaderEntryName: Wasta-Linux 19.10
     productUrl:          http://sites.google.com/site/wastalinux/
     #supportUrl:          https://lubuntu.me/support/
     #knownIssuesUrl:      https://wiki.ubuntu.com/BionicBeaver/Beta1/LubuntuNext#Known_Problems
@@ -20,6 +22,8 @@ images:
     productWelcome:      "00_welcome.png"
 
 slideshow:               "show.qml"
+
+slideshowAPI:            1
 
 style:
    sidebarBackground:    "#808080"
