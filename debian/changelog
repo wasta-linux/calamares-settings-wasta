@@ -1,3 +1,10 @@
+calamares-settings-wasta (0.20.04) focal; urgency=medium
+
+  * updated for 20.04 LTS version of calamares
+  * removed multibootusb support
+
+ -- Justin Luth <jluth@mail.com>  Thu, 21 May 2020 15:07:39 +0300
+
 calamares-settings-wasta (0.19.10) eoan; urgency=medium
 
   * updated for eoan version of calamares

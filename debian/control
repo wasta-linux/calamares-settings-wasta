@@ -11,7 +11,8 @@ Architecture: all
 Depends: calamares, squashfs-tools, ${shlibs:Depends}, ${misc:Depends}
 Recommends: qml-module-qtquick-window2, qml-module-qtquick2
 Suggests:
-Conflicts: calamares-settings-lubuntu
+Conflicts: calamares-settings-ubuntu-common, calamares-settings-lubuntu, calamares-settings-ubuntustudio
+Replaces:  calamares-settings-ubuntu-common, calamares-settings-lubuntu, calamares-settings-ubuntustudio
 Description: Calamares installer: settings and branding for Wasta-Linux
  .
- based off of the Lubuntu 18.04 and 19.10 configurations
+ based off of the Lubuntu 18.04 and 20.04 configurations

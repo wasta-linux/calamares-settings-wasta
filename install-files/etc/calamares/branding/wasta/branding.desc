@@ -6,15 +6,15 @@ windowExpanding:         normal
 strings:
     productName:         Wasta-Linux
     shortProductName:    Wasta-Linux
-    version:             19.10
-    shortVersion:        eoan
-    versionedName:       Wasta-Linux 19.10
-    shortVersionedName:  Wasta-Linux 19.10
-    bootloaderEntryName: Wasta-Linux 19.10
-    productUrl:          http://sites.google.com/site/wastalinux/
+    version:             20.04
+    shortVersion:        focal
+    versionedName:       Wasta-Linux 20.04
+    shortVersionedName:  Wasta-Linux 20.04
+    bootloaderEntryName: Wasta-Linux 20.04
+    productUrl:          http://www.wastalinux.org/
     #supportUrl:          https://lubuntu.me/support/
     #knownIssuesUrl:      https://wiki.ubuntu.com/BionicBeaver/Beta1/LubuntuNext#Known_Problems
-    releaseNotesUrl:     http://sites.google.com/site/wastalinux/home/download
+    releaseNotesUrl:     http://www.wastalinux.org/home/download/
 
 images:
     productLogo:         "icons/wasta-linux.png"
