@@ -6,11 +6,11 @@ windowExpanding:         normal
 strings:
     productName:         Wasta-Linux
     shortProductName:    Wasta-Linux
-    version:             20.04
-    shortVersion:        focal
-    versionedName:       Wasta-Linux 20.04
-    shortVersionedName:  Wasta-Linux 20.04
-    bootloaderEntryName: Wasta-Linux 20.04
+    version:             22.04
+    shortVersion:        jammy
+    versionedName:       Wasta-Linux 22.04
+    shortVersionedName:  Wasta-Linux 22.04
+    bootloaderEntryName: Wasta-Linux 22.04
     productUrl:          http://www.wastalinux.org/
     #supportUrl:          https://lubuntu.me/support/
     #knownIssuesUrl:      https://wiki.ubuntu.com/BionicBeaver/Beta1/LubuntuNext#Known_Problems
