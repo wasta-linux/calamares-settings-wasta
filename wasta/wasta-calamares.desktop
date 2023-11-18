@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Install Wasta 24.04 LTS
+GenericName=Install Wasta
+Exec=pkexec calamares -D6
+Comment=Calamares — System Installer
+Icon=calamares
+Terminal=false
+StartupNotify=true
+Categories=Qt;System;
+Keywords=installer;calamares;system;

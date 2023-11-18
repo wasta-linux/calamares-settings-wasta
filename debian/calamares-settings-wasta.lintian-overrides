@@ -1,0 +1,8 @@
+# The .desktop file uses pkexec to run the installer. pkexec is included in
+# the system.
+calamares-settings-wasta: desktop-command-not-in-package pkexec [usr/share/applications/wasta-calamares.desktop]
+# there will be no manpage in the foreseeable future
+calamares-settings-wasta: no-manual-page [usr/bin/calamares-logs-helper]
+# We're just extracting a log file and preserving it for the user to look at
+# after the installation, this is normal.
+calamares-settings-wasta: uses-dpkg-database-directly [usr/bin/calamares-logs-helper]

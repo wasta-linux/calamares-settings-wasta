@@ -1,0 +1,29 @@
+---
+componentName: wasta
+
+windowExpanding:    normal
+
+strings:
+    productName:         Wasta-Linux
+    shortProductName:    Wasta-Linux
+    version:             24.04 LTS
+    shortVersion:        noble
+    versionedName:       Wasta-Linux
+    shortVersionedName:  Wasta-Linux 24.04 LTS
+    bootloaderEntryName: Wasta-Linux 24.04
+    productUrl:          https://www.wastalinux.org/
+    supportUrl:          https://www.wastalinux.org/home/download/
+
+images:
+    productLogo:         "logo.png"
+    productIcon:         "icon.png"
+    productWelcome:      "00_welcome.png"
+
+slideshow:               "show.qml"
+
+slideshowAPI:            1
+
+style:
+   SidebarBackground:    "#808080"
+   SidebarText:          "#FFFFFF"
+   SidebarTextCurrent:   "#0068C8"

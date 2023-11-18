@@ -1,13 +1,35 @@
 #!/usr/bin/make -f
-# -*- makefile -*-
-# Sample debian/rules that uses debhelper.
-# This file was originally written by Joey Hess and Craig Small.
-# As a special exception, when this file is copied by dh-make into a
-# dh-make output file, you may use that output file without restriction.
-# This special exception was added by Craig Small in version 0.37 of dh-make.
 
-# Uncomment this to turn on verbose mode.
-#export DH_VERBOSE=1
+export LC_ALL=C.UTF-8
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
+PKGSELECT = "common/modules/pkgselect"
+MODULES_DIR = "debian/calamares-settings-ubuntu-common/usr/lib/$(DEB_HOST_MULTIARCH)/calamares/modules"
 
 %:
 	dh $@
+
+override_dh_auto_configure:
+	cd $(PKGSELECT) && mkdir build && cd build && cmake ..
+
+override_dh_auto_build:
+	make;
+	cd $(PKGSELECT)/build && $(MAKE)
+
+override_dh_auto_install:
+	cd $(PKGSELECT)/build && $(MAKE) DESTDIR=$(CURDIR)/debian/calamares-settings-ubuntu-common/ install
+
+override_dh_missing:
+	dh_missing
+	mkdir -pv $(MODULES_DIR)
+	cp -vr common/modules/automirror $(MODULES_DIR)
+	mkdir -pv debian/calamares-settings-ubuntu-common/etc/calamares/modules
+	cp -vr common/modules/*.conf debian/calamares-settings-ubuntu-common/etc/calamares/modules
+	chmod -R 755 debian/calamares-settings-ubuntu-common/usr/lib/
+	chmod 644 $(MODULES_DIR)/automirror/automirror.conf
+	chmod 644 $(MODULES_DIR)/automirror/module.desc
+	chmod 644 $(MODULES_DIR)/pkgselect/libcalamares_viewmodule_pkgselect.so
+	chmod 644 $(MODULES_DIR)/pkgselect/module.desc
+	mkdir -pv debian/calamares-settings-ubuntu-common/usr/bin/
+	cp -v common/snap_install debian/calamares-settings-ubuntu-common/usr/bin/calamares_snap_install

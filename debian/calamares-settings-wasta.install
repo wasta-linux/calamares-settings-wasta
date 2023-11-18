@@ -1,0 +1,6 @@
+wasta/branding/ etc/calamares/
+wasta/calamares-logs-helper usr/bin/
+wasta/wasta-calamares.desktop usr/share/applications/
+wasta/modules/ etc/calamares/
+wasta/settings.conf etc/calamares/
+common/modules/pkgselect/pkgselect.qml etc/calamares/wasta/branding/wasta/
