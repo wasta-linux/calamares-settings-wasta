@@ -17,8 +17,11 @@ gzip --stdout $root/var/lib/dpkg/status > $install_dir/initial-status.gz
 # OEM id isn't a thing, when in OEM mode ubiquity would also archive that.
 # https://github.com/calamares/calamares/issues/943
 
+#delete broken symlinks (before trying to change their permission)
+find -L $install_dir -maxdepth 1 -type l -delete
+
 chmod -v 600 $install_dir/*
 # Make these world readable, they can absolutely not contain anything relevant
 # to security.
-chmod -v 644 $install_dir/initial-status.gz
-chmod -v 644 $install_dir/media-info
+sudo chmod -v 644 $install_dir/initial-status.gz
+sudo chmod -v 644 $install_dir/media-info
