@@ -6,7 +6,7 @@ root=$1
 install_dir=$root/var/log/installer
 [ -d $install_dir ] || mkdir -p $install_dir
 
-cp /root/.cache/calamares/session.log $install_dir/debug
+cp $HOME/.cache/calamares/session.log $install_dir/debug
 
 cp /cdrom/.disk/info $install_dir/media-info
 cp /var/log/casper.log $install_dir/casper.log
@@ -17,10 +17,10 @@ gzip --stdout $root/var/lib/dpkg/status > $install_dir/initial-status.gz
 # OEM id isn't a thing, when in OEM mode ubiquity would also archive that.
 # https://github.com/calamares/calamares/issues/943
 
-#delete broken symlinks (before trying to change their permission)
+#delete broken symlinks (avoid irrelevant chmod errorlevel)
 find -L $install_dir -maxdepth 1 -type l -delete
 
-chmod -v 600 $install_dir/*
+chmod -v 600 $install_dir/* | true
 # Make these world readable, they can absolutely not contain anything relevant
 # to security.
 sudo chmod -v 644 $install_dir/initial-status.gz
