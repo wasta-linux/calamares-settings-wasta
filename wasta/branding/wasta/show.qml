@@ -229,7 +229,7 @@ Presentation
                         text:
 '<p><a href="http://www.sil.org/" style="text-decoration:none">SIL</a> has made their language development software easily available in Wasta-Linux. Keyman is pre-installed, enabling keyboarding for thousands of different languages.</p>
 <p>Ready to make books? SIL\'s <a href="http://www.bloomlibrary.org/" style="text-decoration:none">Bloom</a> is available for users to create their own books ready for publishing to PDF or distribution on smart phones.</p>
-<u><h3>Supported SIL software</h3></u>
+<u><h3>Supported SIL software</h3></u>'
                         font { family: "Ubuntu"; pixelSize: 12; weight: Font.Normal }
                         textFormat: Text.RichText
                         wrapMode: Text.WordWrap

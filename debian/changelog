@@ -1,4 +1,4 @@
-calamares-settings-ubuntu (1:24.04.5.0.4) noble; urgency=medium
+calamares-settings-ubuntu (1:24.04.5.0.5) noble; urgency=medium
 
   * increase timeout
   * bloom is not shipped pre-installed anymore
